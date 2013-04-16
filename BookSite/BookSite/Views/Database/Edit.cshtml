@@ -1,0 +1,61 @@
+﻿@model BookSite.Post
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Post</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.creatorName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.creatorName)
+            @Html.ValidationMessageFor(model => model.creatorName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostType)
+            @Html.ValidationMessageFor(model => model.PostType)
+        </div>
+
+        @Html.HiddenFor(model => model.PostID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Message)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Message)
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
