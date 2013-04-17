@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Login.Models
+namespace BookSite.Models
 {
     public class User
     {

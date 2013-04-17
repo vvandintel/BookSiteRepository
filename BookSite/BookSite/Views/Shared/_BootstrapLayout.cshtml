@@ -56,14 +56,14 @@
             </ul>
             <ul class="nav" style="float:right">
 @*                            <li>@Html.ActionLink("Account", "Account", "Home")</li>*@
-            @if (Request.IsAuthenticated)
+            @*@if (Request.IsAuthenticated)
             {
                 <li>@Html.ActionLink("Account", "Account", "Account")</li>
             }
             else
             {
                 <li>@Html.ActionLink("Login", "Login", "Account")</li>
-            }
+            }*@
                 @if (Request.IsAuthenticated) {
                     @Html.Encode(User.Identity.Name)
                     <li>@Html.ActionLink("Sign Out", "Logout", "User")</li>
@@ -73,7 +73,6 @@
                     
                     <li>@Html.ActionLink("Sign In", "Login", "User")</li>
                 }
-    }
 
             </ul>
           </div><!--/.nav-collapse -->
