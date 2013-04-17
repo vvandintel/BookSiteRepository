@@ -5,7 +5,7 @@ using System.Web;
 
 namespace BookSite
 {
-    public class Administrator : User
+    public class Administrator
     {
 
     }
