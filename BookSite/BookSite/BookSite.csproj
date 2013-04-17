@@ -161,7 +161,6 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BookController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
