@@ -73,6 +73,8 @@
                     
                     <li>@Html.ActionLink("Sign In", "LogOn", "Account")</li>
                 }
+                @*     if user is admin, display following link:*@
+                <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
 
             </ul>
           </div><!--/.nav-collapse -->

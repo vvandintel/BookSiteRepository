@@ -161,6 +161,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="HTMLExtension.cs" />
     <Compile Include="Models\Administrator.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -338,7 +339,7 @@
     <Content Include="Views\Database\Edit.cshtml" />
     <Content Include="Views\Database\Delete.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\Admin\Admin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -365,7 +366,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>15000</DevelopmentServerPort>
+          <DevelopmentServerPort>4247</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_BootstrapLayout.cshtml";
+}
+
+<h2>Admin</h2>
+
+
+@using (Html.BeginForm("Index", "Admin",
+FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div>
+    <br />
+    <br />
+    <div>
+@*    show indicator which showss that upload is successful; validator for wrong file type, no file selected*@
+        Upload entire book:
+        <input name="bookUpload" type="file" />
+        <input type="submit" value="Upload File" />
+    </div>
+    <br />
+    <div>
+        Upload chapter 1:
+        <input name="ch1Upload" type="file" />
+        <input type="submit" value="Upload File"  />
+    </div>
+    <br />
+    <div>
+        Upload chapter 2:
+        <input name="ch2Upload" type="file"/>
+        <input type="submit" value="Upload File" />
+    </div>
+    <br />
+    <div>
+        Upload chapter 3:
+        <input name="ch3Upload" type="file"/>
+        <input type="submit" value="Upload File" />
+    </div>
+</div>
+}
+
+@*@{
+    string filePath = bookUpload.PostedFile.FileName;          // getting the file path of uploaded file
+    string filename1 = Path.GetFileName(filePath);               // getting the file name of uploaded file
+    string ext = Path.GetExtension(filename1);                      // getting the file extension of uploaded file
+    string type = String.Empty;
+
+}*@
