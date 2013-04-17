@@ -64,6 +64,16 @@
             {
                 <li>@Html.ActionLink("Login", "Login", "Account")</li>
             }
+                @if (Request.IsAuthenticated) {
+                    @Html.Encode(User.Identity.Name)
+                    <li>@Html.ActionLink("Sign Out", "Logout", "User")</li>
+                }
+                else {
+                    <li>@Html.ActionLink("Register", "Register", "User")</li>
+                    
+                    <li>@Html.ActionLink("Sign In", "Login", "User")</li>
+                }
+    }
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -72,6 +82,17 @@
     </div>
 
     <div class="container">
+    <div>
+    @if (Request.IsAuthenticated) {
+        <strong>@Html.Encode(User.Identity.Name)</strong>
+        @Html.ActionLink("Sign Out", "Logout", "User")
+    }
+    else {
+        @Html.ActionLink("Register", "Register", "User")
+        <span> | </span>
+        @Html.ActionLink("Sign In", "Login", "User")
+    }
+</div> 
 
     @RenderBody()
 
