@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Harris-VanDintel_PDF" Class="DBContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=jeff.cedarville.edu;Initial Catalog=Harris-VanDintel_PDF;Persist Security Info=True;User ID=itm3500" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Harris_VanDintel_PDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PDF_Chapter" Member="PDF_Chapters">
+    <Type Name="PDF_Chapter">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FileData" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
