@@ -39,10 +39,3 @@ FormMethod.Post, new { enctype = "multipart/form-data" }))
 </div>
 }
 
-@*@{
-    string filePath = bookUpload.PostedFile.FileName;          // getting the file path of uploaded file
-    string filename1 = Path.GetFileName(filePath);               // getting the file name of uploaded file
-    string ext = Path.GetExtension(filename1);                      // getting the file extension of uploaded file
-    string type = String.Empty;
-
-}*@
