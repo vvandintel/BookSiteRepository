@@ -48,10 +48,22 @@
               <li><a href="../Home/ReadBook">Read Book</a></li>
               <li><a href="../Home/DownloadPDF">Download PDF</a></li>
               <li><a href="../Home/AuthorBio">Author Bio</a></li>*@
-
+             
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("Read Book","Index","Book")</li>
-                <li>@Html.ActionLink("Download PDF", "DownloadPDF", "Home")</li>
+@*                <li>@Html.ActionLink("Download PDF", "Index", "Book", new { id = 1 }) </li>*@
+                <li><a>@Html.ActionLink(
+                    "Download PDF", 
+                    "GetFile", 
+                    "Admin", 
+                    new { id = 1 }, 
+                    null
+                    )</a></li>
+
+@*                href="@(Html.MyActionHref(controllerName: "MyController", actionName: "MyAction"))">*@
+
+             @*   <li><a href="/GetFile/1">Download PDF</a></li>*@
+            @*    <li>@Html.ActionLink("Download PDF", "DownloadPDF", "Home")</li>*@
                 <li>@Html.ActionLink("Author Bio", "AuthorBio", "Home")</li>
             </ul>
             <ul class="nav" style="float:right">
