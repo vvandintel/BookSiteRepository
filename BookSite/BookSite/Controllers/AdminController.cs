@@ -64,6 +64,7 @@ namespace BookSite.Controllers
                     fileContent = (byte[])rdr["FileContent"];
                     mimeType = rdr["MimeType"].ToString();
                     fileName = rdr["FileName"].ToString();
+                    //Response.AddHeader("Content-Disposition", "inline");
                 }
             }
             return File(fileContent, mimeType, fileName);
